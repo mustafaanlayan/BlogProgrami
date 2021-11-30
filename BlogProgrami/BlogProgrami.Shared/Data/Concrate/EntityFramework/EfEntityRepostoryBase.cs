@@ -21,12 +21,40 @@ namespace BlogProgrami.Shared.Data.Concrate.EntityFramework
         }
         public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] inculeProperties)
         {
-            throw new NotImplementedException();
+            IQueryable<TEntity> query = _context.Set<TEntity>();
+            if (predicate != null)
+            {
+                query = query.Where(predicate);
+            }
+
+            if (inculeProperties.Any())
+            {
+                foreach (var includeProperty in inculeProperties)
+                {
+                    query = query.Include(includeProperty);
+                }
+            }
+
+            return await query.SingleOrDefaultAsync();
         }
 
         public async Task<IList<TEntity>> GetAllAsycn(Expression<Func<TEntity, bool>> predicate = null, params Expression<Func<TEntity, object>>[] inculeProperties)
         {
-            throw new NotImplementedException();
+            IQueryable<TEntity> query = _context.Set<TEntity>();
+            if (predicate!=null)
+            {
+                query = query.Where(predicate);
+            }
+
+            if (inculeProperties.Any())
+            {
+                foreach (var includeProperty in inculeProperties)
+                {
+                    query = query.Include(includeProperty);
+                }
+            }
+
+            return await query.ToListAsync();
         }
 
         public async Task AddSycn(TEntity entity)
@@ -36,12 +64,13 @@ namespace BlogProgrami.Shared.Data.Concrate.EntityFramework
 
         public async Task UpdateAsycn(TEntity entity)
         {
-            throw new NotImplementedException();
+             await Task.Run(()=>{
+                _context.Set<TEntity>().Update(entity); });
         }
 
         public async Task DeleteAsycn(TEntity entity)
         {
-            await Task.Run((() => { _context.Set<TEntity>().Remove(entity); });
+            await Task.Run(() => { _context.Set<TEntity>().Remove(entity); });
         }
 
         public async Task<bool> AnnyAsycn(Expression<Func<TEntity, bool>> predicate)
