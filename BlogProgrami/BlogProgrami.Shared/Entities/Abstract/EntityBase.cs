@@ -9,7 +9,7 @@ namespace BlogProgrami.Shared.Entities.Abstract
    public abstract class EntityBase
     {
         public virtual int Id { get; set; }
-        public virtual DateTime CreatedTime { get; set; }=DateTime.Now;
+        public virtual DateTime CreatedDate { get; set; }=DateTime.Now;
         public virtual DateTime ModifeDateTime { get; set; }=DateTime.Now;
         public virtual bool IsDeleted { get; set; } = false;
         public virtual bool IsActive { get; set; } = true;
