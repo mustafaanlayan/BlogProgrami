@@ -37,7 +37,7 @@ namespace BlogProgrami.Data.Concrate.EntityFramework.Mapping
             builder.Property(a => a.IsActive).IsRequired();
             builder.Property(a => a.IsDeleted).IsRequired();
             builder.Property(a => a.Notlar).HasMaxLength(500);
-            builder.HasOne<Category>(a => a.Kategori).WithMany(c => c.Articles).HasForeignKey(a=>a.CategoryId);
+            builder.HasOne<Category>(a => a.Kategori).WithMany(a => a.Articles).HasForeignKey(c=>c.CategoryId);
             builder.HasOne<Kullanici>(a => a.Kullanici).WithMany(u => u.Articles).HasForeignKey(a => a.KullaniciId);
             builder.ToTable("Makaleler");
         }
