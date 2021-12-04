@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BlodProgrami.Entity.Concrete;
+using BlogProgrami.Data.Concrate.EntityFramework.Mapping;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogProgrami.Data.Concrate.EntityFramework.Context
@@ -19,6 +20,15 @@ namespace BlogProgrami.Data.Concrate.EntityFramework.Context
         {
             optionsBuilder.UseSqlServer(
                 @"Server=MUSTAFA\MUSTAFA,Database=Blog;Trusted_Connection=True;ConnectTimeout=30;MultipleActiveResultSets=True;");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ArticleMap());
+            modelBuilder.ApplyConfiguration(new CategoryMap());
+            modelBuilder.ApplyConfiguration(new CommentMapping());
+            modelBuilder.ApplyConfiguration(new RoleMapp());
+            modelBuilder.ApplyConfiguration(new UserMap());
         }
     }
 }
