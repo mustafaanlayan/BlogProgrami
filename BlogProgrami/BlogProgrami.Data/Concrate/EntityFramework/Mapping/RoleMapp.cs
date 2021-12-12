@@ -29,7 +29,20 @@ namespace BlogProgrami.Data.Concrate.EntityFramework.Mapping
             builder.Property(r => r.IsDeleted).IsRequired();
             builder.Property(r => r.Notlar).HasMaxLength(500);
             builder.ToTable("Roller");
+            builder.HasData(new Role
+            {
 
+                Id = 1,
+                Adi = "Admin",
+                Aciklama = "Admin Rolü Tüm Haklara Sahiptir",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifedByName = "InitialCreate",
+                ModifeDateTime = DateTime.Now,
+                Notlar = "Admin Rolüdür"
+            });
         }
     }
 }

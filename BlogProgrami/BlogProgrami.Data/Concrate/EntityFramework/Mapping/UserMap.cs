@@ -42,10 +42,24 @@ namespace BlogProgrami.Data.Concrate.EntityFramework.Mapping
             builder.Property(u => u.Notlar).HasMaxLength(500);
             builder.ToTable("Kullaniciler");
 
-
-
-
-
+            builder.HasData(new Kullanici
+            {
+                Id = 1,
+                RoleId = 1,
+                Adi = "Mustafa",
+                Soyadi = "ANLAYAN",
+                KullaniciAdi = "mustafaanlayan",
+                Email = "mustafaanlayan@tgmail.com",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifedByName = "InitialCreate",
+                ModifeDateTime = DateTime.Now,
+                Aciklama = "ilk Admin Kullanıcısı",
+                Notlar = "Admin Kullanıcısı",
+                SifreHash =Encoding.ASCII.GetBytes("0192023a7bbd73250516f069df18b500")
+            });
 
         }
     }
