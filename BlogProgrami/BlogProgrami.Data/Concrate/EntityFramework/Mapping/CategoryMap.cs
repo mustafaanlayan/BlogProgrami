@@ -28,6 +28,48 @@ namespace BlogProgrami.Data.Concrate.EntityFramework.Mapping
             builder.Property(c => c.IsDeleted).IsRequired();
             builder.Property(c => c.Notlar).HasMaxLength(500);
             builder.ToTable("Categories");
+
+            builder.HasData(
+                new Category
+            {
+                Id = 1,
+                Adi = "Csharp",
+                Aciklama = "C# Programlama Dili",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifedByName = "InitialCreate",
+                ModifeDateTime = DateTime.Now,
+                Notlar = "C# Blok Kategorisi",
+            },
+            new Category
+            {
+                Id = 2,
+                Adi = "Cplus",
+                Aciklama = "C++ Programlama Dili",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifedByName = "InitialCreate",
+                ModifeDateTime = DateTime.Now,
+                Notlar = "C++ Blok Kategorisi",
+            },
+                new Category
+                {
+                    Id = 3,
+                    Adi = "Java",
+                    Aciklama = "Java Programlama Dili",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifedByName = "InitialCreate",
+                    ModifeDateTime = DateTime.Now,
+                    Notlar = "JavaBlok Kategorisi",
+                }
+                    );
         }
     }
 }

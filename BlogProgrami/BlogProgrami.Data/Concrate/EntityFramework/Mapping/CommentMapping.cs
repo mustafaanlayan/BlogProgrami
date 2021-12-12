@@ -29,6 +29,20 @@ namespace BlogProgrami.Data.Concrate.EntityFramework.Mapping
             builder.Property(c => c.Notlar).HasMaxLength(500);
             builder.ToTable("Yorumlar");
 
+            builder.HasData(new Comment
+            {
+                Id = 1,
+                ArticleId = 1,
+                Yazi = "hhushshaıusıusahsusjhjsakjsajsjskj",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifedByName = "InitialCreate",
+                ModifeDateTime = DateTime.Now,
+                Notlar = "JavaBlok Kategorisi"
+            });
+
         }
     }
 }

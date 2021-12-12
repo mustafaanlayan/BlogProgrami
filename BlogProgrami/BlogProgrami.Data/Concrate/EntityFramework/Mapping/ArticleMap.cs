@@ -40,6 +40,52 @@ namespace BlogProgrami.Data.Concrate.EntityFramework.Mapping
             builder.HasOne<Category>(a => a.Kategori).WithMany(a => a.Articles).HasForeignKey(c=>c.CategoryId);
             builder.HasOne<Kullanici>(a => a.Kullanici).WithMany(u => u.Articles).HasForeignKey(a => a.KullaniciId);
             builder.ToTable("Makaleler");
+
+            builder.HasData(new Article
+                {
+                    Id = 1,
+                    CategoryId = 1,
+                    Baslik = "C# 9.0",
+                    Icerik = "gdeggwhhwhwhewhwhwhwhhwhjwhwehhwehwehwehhwehwhwhh",
+                    Resim = "Default.jpeg",
+                    SeoAciklama = "C# 9.0",
+                    MetaTag = "C#,C#9",
+                    Date = DateTime.Now,
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifedByName = "InitialCreate",
+                    ModifeDateTime = DateTime.Now,
+                    Notlar = "JavaBlok Kategorisi",
+                    KullaniciId = 1,
+                    YorumSayisi = 1,
+                    OkunmaSayisi = 100,
+                    Etiket = "C#"
+                },
+                new Article
+                {
+                    Id = 2,
+                    CategoryId = 2,
+                    Baslik = "C# 9.0",
+                    Icerik = "gdeggwhhwhwhewhwhwhwhhwhjwhwehhwehwehwehhwehwhwhh",
+                    Resim = "Default.jpeg",
+                    SeoAciklama = "C# 9.0",
+                    MetaTag = "C#,C#9",
+                    Date = DateTime.Now,
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifedByName = "InitialCreate",
+                    ModifeDateTime = DateTime.Now,
+                    Notlar = "JavaBlok Kategorisi",
+                    KullaniciId = 1,
+                    YorumSayisi = 1,
+                    OkunmaSayisi = 100,
+                    Etiket = "c#"
+                }
+            );
         }
     }
 }
