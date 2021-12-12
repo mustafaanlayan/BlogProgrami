@@ -8,7 +8,7 @@ using BlogProgrami.Shared.Data.Abstract;
 
 namespace BlogProgrami.Data.Abstrach
 {
-    interface IUserRepository:IEntityRepository<Kullanici>
+    public interface IUserRepository:IEntityRepository<Kullanici>
     {
     }
 }
