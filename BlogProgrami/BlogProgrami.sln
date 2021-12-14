@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogProgrami.Shared", "BlogProgrami.Shared\BlogProgrami.Shared.csproj", "{EFA0D33B-5083-4828-A30C-093D402D5C2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogProgrami.Shared", "BlogProgrami.Shared\BlogProgrami.Shared.csproj", "{EFA0D33B-5083-4828-A30C-093D402D5C2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlodProgrami.Entity", "BlodProgrami.Entity\BlodProgrami.Entity.csproj", "{7C9CB4CE-55F2-45BC-A280-12F2D7999C17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogProgrami.Entity", "BlodProgrami.Entity\BlogProgrami.Entity.csproj", "{7C9CB4CE-55F2-45BC-A280-12F2D7999C17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogProgrami.Data", "BlogProgrami.Data\BlogProgrami.Data.csproj", "{9E48228F-F3D8-41C4-90A4-7ED7B3D84F56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogProgrami.Data", "BlogProgrami.Data\BlogProgrami.Data.csproj", "{9E48228F-F3D8-41C4-90A4-7ED7B3D84F56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogProgrami.Services", "BlogProgrami.Services\BlogProgrami.Services.csproj", "{BF229CB6-99FD-4926-A54B-7D7318222D63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogProgrami.Services", "BlogProgrami.Services\BlogProgrami.Services.csproj", "{BF229CB6-99FD-4926-A54B-7D7318222D63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogProgrami.Mvc", "BlogProgrami.Mvc\BlogProgrami.Mvc.csproj", "{889BF48E-D37F-46D2-9734-A7136EB9DE3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogProgrami.Mvc", "BlogProgrami.Mvc\BlogProgrami.Mvc.csproj", "{889BF48E-D37F-46D2-9734-A7136EB9DE3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

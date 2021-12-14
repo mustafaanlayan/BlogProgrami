@@ -50,6 +50,7 @@ namespace BlogProgrami.Data.Concrate.EntityFramework.Mapping
                 Soyadi = "ANLAYAN",
                 KullaniciAdi = "mustafaanlayan",
                 Email = "mustafaanlayan@tgmail.com",
+                Resim = "Defaultİmage",
                 IsActive = true,
                 IsDeleted = false,
                 CreatedByName = "InitialCreate",
