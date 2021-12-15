@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BlodProgrami.Entity.Concrete;
+﻿using BlodProgrami.Entity.Concrete;
 using BlogProgrami.Data.Concrate.EntityFramework.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,7 +14,7 @@ namespace BlogProgrami.Data.Concrate.EntityFramework.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                @"Server=MUSTAFA\MUSTAFA,Database=Blog;Trusted_Connection=True;ConnectTimeout=30;MultipleActiveResultSets=True;");
+                @"Server=MUSTAFA\MUSTAFA;Database=Blog;Trusted_Connection=True;MultipleActiveResultSets=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
