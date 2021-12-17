@@ -15,7 +15,7 @@ namespace BlogProgrami.Shared.Data.Abstract
        Task<IList<T>> GetAllAsycn(Expression<Func<T, bool>> predicate = null,
            params Expression<Func<T, object>>[] inculeProperties);
 
-       Task AddSycn(T entity);
+       Task AddAsycn(T entity);
        Task UpdateAsycn(T entity);
        Task DeleteAsycn(T entity);
        Task<bool> AnnyAsycn(Expression<Func<T, bool>> predicate);
