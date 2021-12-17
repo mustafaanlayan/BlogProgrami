@@ -11,9 +11,10 @@ namespace BlogProgrami.Services.Abstract
 {
    public interface ICategoryService
    {
-       Task<IDataResult<Category>> Get(int CategoryId);
+       Task<IDataResult<Category>> Get(int categoryId);
        Task<IDataResult<IList<Category>>> GetAll();
-       Task<IResult> Add(CategoryAddDto categoryAddDto,string createdByName);
+       Task<IDataResult<IList<Category>>> GetAllNoneDeleted();
+        Task<IResult> Add(CategoryAddDto categoryAddDto,string createdByName);
        Task<IResult> Update(CategoryUpdateDto categoryUpdateDto, string modifiedByName);
        Task<IResult> Delete(int categoryId);
        Task<IResult> HardDelete(int categoryId);

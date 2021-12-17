@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlodProgrami.Entity\BlogProgrami.Entity.csproj" />
+    <ProjectReference Include="..\BlogProgrami.Data\BlogProgrami.Data.csproj" />
     <ProjectReference Include="..\BlogProgrami.Shared\BlogProgrami.Shared.csproj" />
   </ItemGroup>
 
